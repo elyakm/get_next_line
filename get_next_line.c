@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
+/*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2022/12/12 18:48:27 by kamelialaks      ###   ########.fr       */
+/*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
+/*   Updated: 2023/02/02 16:34:49 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *get_next_line(int fd)
+#include "../include/get_next_line.h"
+
+char	*get_next_line(int fd)
 {
-    
+	printf("inside: %d\n",)
+	return(NULL);
 }
