@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/08 17:05:21 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/08 17:36:05 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,21 @@ int ft_strlen(char *str)
         i++;
     return (i);
 }
+
+int		if_newline(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == '\n');
+			return (1);
+	}
+	return (0);
+}
+
+
 
 void    *ft_calloc(size_t count, size_t size)
 {
