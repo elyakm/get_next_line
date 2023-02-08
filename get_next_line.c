@@ -5,15 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/02 16:34:49 by klaksi           ###   ########.fr       */
+/*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
+/*   Updated: 2023/02/08 14:41:22 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/get_next_line.h"
+#include "get_next_line.h"
+
+char    *ft_strjoint(char *src, char *dest)
+{
+    char    *str;
+    
+    str = calloc()
+}
+
+
 
 char	*get_next_line(int fd)
 {
-	printf("inside: %d\n",)
-	return(NULL);
+    char *stash;
+    
+    stash = malloc(BUFFER_SIZE + 1 * sizeof(char));
+    if (!stash)
+        return(NULL);
+    read(fd, stash, BUFFER_SIZE);
+    return (stash);
 }

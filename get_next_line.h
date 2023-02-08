@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/02 16:38:14 by klaksi           ###   ########.fr       */
+/*   Created: 2022/12/12 18:45:14 by kamelialaks       #+#    #+#             */
+/*   Updated: 2023/02/08 12:31:45 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/get_next_line.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char	*get_next_line(int fd)
-{
-	char	*buff;
-	int		rd;
+#ifndef BUFFER_SIZE
+# define BUFFER_SIZE 70
+# endif
 
-	printf("fd:: %d\n", fd);
-	buff = malloc(sizeof(char) * 100);
-	rd = read(fd, buff, 20);
-	printf("rd:: %d\n", rd);
-	return (buff);
-}
+# include <fcntl.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+
+char	*get_next_line(int fd);
+
+#endif

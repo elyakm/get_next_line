@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 18:45:14 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/02 16:32:29 by klaksi           ###   ########.fr       */
+/*   Created: 2023/02/08 11:58:22 by klaksi            #+#    #+#             */
+/*   Updated: 2023/02/08 12:02:42 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line.h"
 
-# include <fcntl.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-char	*get_next_line(int fd);
-
-#endif
+int main()
+{
+	int fd = open("txt.txt", O_RDONLY);
+	printf("%s\n", get_next_line(fd));
+}
