@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/08 17:36:05 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/08 18:07:13 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ int		if_newline(char *str)
 	return (0);
 }
 
-
-
 void    *ft_calloc(size_t count, size_t size)
 {
     void *ptr;
@@ -51,7 +49,6 @@ void    *ft_calloc(size_t count, size_t size)
         ptr[i++] = 0;
     return ((void *)ptr);
 }
-,
 
 char    *ft_strjoint(char *stash, char *buff)
 {
@@ -59,7 +56,9 @@ char    *ft_strjoint(char *stash, char *buff)
 	size_t	i;
 	size_t	j;
     
-    if (!buff)
+	if (!stush)
+		stash = (char *)ft_calloc(1, sizeof(char));
+    if (!stash || !buff)
         return (NULL);
         
     str = (char *)ft_calloc(ft_strlen(stash) + ft_strlen(buff) + 1);
@@ -78,13 +77,24 @@ char    *ft_strjoint(char *stash, char *buff)
 	return (str);
 }
 
+char	*read_buff(char *stash, int fd)
+{
+	char 	*buff;
+	
+	buff = (char *)calloc(BUFFER_SIZE + 1, sizeof(char));
+	while (if_newline(stash) == 0)
+	{
+		read(fd, buff, BUFFER_SIZE);
+		
+	}
+}
+
 char	*get_next_line(int fd)
 {
     char *stash;
-    
-    stash = malloc(BUFFER_SIZE + 1 * sizeof(char));
+
     if (!stash)
         return(NULL);
-    read(fd, stash, BUFFER_SIZE);
+    stash = read_buff();
     return (stash);
 }
