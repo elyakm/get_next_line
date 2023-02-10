@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:58:22 by klaksi            #+#    #+#             */
-/*   Updated: 2023/02/10 16:03:01 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 17:59:42 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,22 @@ int main (void)
 	char *str;
 
 	s1 = "im gonna become";
-	s2 = "a fucking billionnaire";
+	s2 = "a fk billionnnaire";
 	printf("%s\n", ft_strjoin(s1, s2));
+}
+
+int main(void)
+{
+	size_t len;
+	
+	char src[] = "im hungryyy";
+    char dst[15];
+	len = ft_strlcpy(dst, src, sizeof(dst));
+
+    printf("%s\n", src);
+    printf("%s\n", dst);
+    printf("Length of source string: %lu\n", strlen(src));
+    printf("Length returned by ft_strlcpy: %lu\n", len);
+
+    return 0;
 }

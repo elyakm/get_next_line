@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:14 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/09 16:52:14 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 18:02:00 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,16 @@
 # include <unistd.h>
 # include <sys/types.h>
 # include <sys/uio.h>
+# include <string.h>
 
-char	*get_next_line(int fd);
 int     ft_strlen(char *str);
-int		if_newline(char *str);
 void    *ft_calloc(size_t count, size_t size);
 char    *ft_strjoin(char *stash, char *buff);
+char	*ft_strchr(char *s, int c);
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
+int		if_newline(char *str);
+char	*read_buff(char *stash, int fd);
+char	*get_next_line(int fd);
 
 #endif

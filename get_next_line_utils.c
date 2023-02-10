@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/10 16:38:09 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 17:51:30 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_strlen(char *str)
 {
-    int i;
+    unsigned long i;
     
     i = 0;
     while(str[i])
@@ -67,29 +67,6 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (str);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 char	*ft_strchr(char *s, int c)
 {
 	int	i;
@@ -104,4 +81,22 @@ char	*ft_strchr(char *s, int c)
 	if (s[i] == (char)c)
 		return ((char *)s + i);
 	return (NULL);
+}
+
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+    size_t len;
+    size_t i;
+
+    len = strlen(src);
+    if (dstsize == 0)
+        return (len);
+    i = 0;
+    while (i < dstsize - 1 && src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    dst[i] = '\0';
+    return (len);
 }
