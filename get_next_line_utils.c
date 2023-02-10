@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/09 16:39:43 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 15:21:54 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,32 +37,31 @@ void    *ft_calloc(size_t count, size_t size)
     return ((void *)ptr);
 }
 
-char    *ft_strjoint(char *stash, char *buff)
+char	*ft_strjoin(char *s1, char *s2)
 {
-    char    *str;
-	size_t	i;
-	size_t	j;
+	char *str;
+	int i;
+	int len;
 
-	if (!stash)
-		stash = (char *)ft_calloc(1, sizeof(char));
-    if (!stash || !buff)
-        return (NULL);
-        
-    str = (char *)ft_calloc(ft_strlen(stash) + ft_strlen(buff) + 1);
-	if (!str)
-		return(NULL);
-        
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (!s1 || !s2)
+		return (NULL);
+
+	str = (char *)malloc((sizeof(char) * (len + 1)));
 	i = 0;
-	while(stash[i])
+	while (s1[i])
 	{
-		str[i] = stash[i];
+		str[i] = s1[i];
 		i++;
 	}
-	j = 0;
-    
-	while (buff[j])
-		str[i++] = buff[j++];
-	str[i] = '\0';
+	
+	i = 0;
+	while (s2[i])
+	{
+		str[ft_strlen(s1) + i] = s2[i];
+		i++;
+	}
+	str[len] = '\0';
 	return (str);
 }
 
