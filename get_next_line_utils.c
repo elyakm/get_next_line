@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/10 15:21:54 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 15:38:01 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,21 @@ int ft_strlen(char *str)
     return (i);
 }
 
-void    *ft_calloc(size_t count, size_t size)
+void    *ft_calloc(size_t element_count, size_t size)
 {
-    void *ptr;
-    int i;
-    
-    ptr = malloc(size * count) * sizeof(char);
-    if(!ptr)
-        return (NULL);
+	char *tab;
+	int i;
 
-    i = 0;
-    while (ptr[i] < (count * size))
-        ptr[i++] = 0;
-    return ((void *)ptr);
+	i = 0;
+	tab = malloc(element_count * size);
+	if(!tab)
+		return(NULL);
+	while(tab[i])
+	{
+		tab[i] = '\0';
+		i++;
+	}
+	return (NULL);
 }
 
 char	*ft_strjoin(char *s1, char *s2)

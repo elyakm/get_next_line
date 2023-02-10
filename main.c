@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:58:22 by klaksi            #+#    #+#             */
-/*   Updated: 2023/02/10 15:19:40 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 16:01:06 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,4 @@ int main (void)
 	s2 = "a fucking billionnaire";
 	printf("%s\n", ft_strjoin(s1, s2));
 }
+
