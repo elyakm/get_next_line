@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:58:22 by klaksi            #+#    #+#             */
-/*   Updated: 2023/02/10 16:01:06 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 16:03:01 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int main()
 	printf("%s\n", get_next_line(fd));
 }
 
-
 int	main(void)
 {
 	char *s;
@@ -28,8 +27,6 @@ int	main(void)
 	c = 'm';
 	printf("%s\n", ft_strchr(s, c));
 }
-
-
 
 int main (void)
 {
@@ -41,4 +38,3 @@ int main (void)
 	s2 = "a fucking billionnaire";
 	printf("%s\n", ft_strjoin(s1, s2));
 }
-

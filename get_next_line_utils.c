@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/10 15:38:01 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/10 16:38:09 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ void    *ft_calloc(size_t element_count, size_t size)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char *str;
-	int i;
+	size_t i;
 	int len;
 
 	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!s1 || !s2)
 		return (NULL);
 
-	str = (char *)malloc((sizeof(char) * (len + 1)));
+	str = ft_calloc(sizeof(char), (len + 1));
 	i = 0;
 	while (s1[i])
 	{
@@ -66,6 +66,29 @@ char	*ft_strjoin(char *s1, char *s2)
 	str[len] = '\0';
 	return (str);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 char	*ft_strchr(char *s, int c)
 {
