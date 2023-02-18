@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/17 18:09:04 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 16:52:48 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,33 +22,28 @@ static size_t   ft_strlen(char *str)
     return (i);
 }
 
-
-char    *ft_strjoin(char *s1, char *s2)
+char    *ft_strjoin(char *stash, char *buff)
 {
-    char *str;
     size_t i;
-    int len;
+    size_t j;
+    char *line;
 
-    len = ft_strlen(s1) + ft_strlen(s2);
-    if (!s1 || !s2)
+    if (!stash)
+        stash = (char *)ft_calloc(1, sizeof(char));
+    if (!stash || !buff)
         return (NULL);
-
-    str = ft_calloc(sizeof(char), (len + 1));
-    i = 0;
-    while (s1[i])
-    {
-        str[i] = s1[i];
-        i++;
-    }
-    
-    i = 0;
-    while (s2[i])
-    {
-        str[ft_strlen(s1) + i] = s2[i];
-        i++;
-    }
-    str[len] = '\0';
-    return (str);
+    line = (char *)ft_calloc(ft_strlen(stash) + ft_strlen(buff) + 1, sizeof(char));
+    if (!line)
+        return (NULL);
+    i = -1;
+    while (stash[++i])
+        line[i] = stash[i];
+    j = 0;
+    while (buff[j])
+        line[i++] = buff[j++];
+    line[i] = '\0';
+    free(stash);
+    return (line);
 }
 
 char    *ft_strchr(const char *s, int c)

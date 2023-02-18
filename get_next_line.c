@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
+/*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/17 21:57:48 by kamelialaks      ###   ########.fr       */
+/*   Updated: 2023/02/18 16:59:12 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,15 @@ static char *read_buff(char *stash, int fd)
     return (stash);
 }
 
-char    *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-  static char *stash;
-  char *line;
-  
-  if (fd < 0 || fd >= 1024 || BUFFER_SIZE <= 0)
-    return (NULL);
-    stash = read_buff(stash, fd);
+	static char *stash;
+	char *line;
+	
+	if (fd < 0 || fd >= 1024 || BUFFER_SIZE <= 0)
+		return (NULL);
+	stash = read_buff(stash, fd);
+	if (!stash)
+		return (NULL);
+	return (stash);
 }
