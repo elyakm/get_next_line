@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kamelialaksi <kamelialaksi@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/17 18:08:38 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/17 21:57:48 by kamelialaks      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void    *ft_calloc(size_t element_count, size_t size)
 {
     char *tab;
-    int i;
+    size_t i;
 
     i = 0;
-    tab = malloc(element_count * size);
+    tab = (void *)malloc(element_count * size);
     if(!tab)
         return(NULL);
     while(i < (element_count * size))
