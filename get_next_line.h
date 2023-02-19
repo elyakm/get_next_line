@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:14 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/18 19:42:12 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 19:44:14 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 #ifndef BUFFER_SIZE
-# define BUFFER_SIZE 10
+# define BUFFER_SIZE 70
 # endif
 
 # include <fcntl.h>
