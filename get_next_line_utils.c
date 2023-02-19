@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/18 19:42:37 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 20:06:10 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char    *ft_strchr(const char *s, int c)
     return (NULL);
 }
 
-char    *get_line(char *stash)
+char    *ft_get_line(char *stash)
 {
     char *line;
     size_t i;

@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:14 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/18 19:44:14 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 20:06:16 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,9 @@
 void    *ft_calloc(size_t count, size_t size);
 char    *ft_strjoin(char *stash, char *buff);
 char    *ft_strchr(const char *s, int c);
-size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*get_next_line(int fd);
 char	*clean_stash(char *stash);
-char    *get_line(char *stash);
+char    *ft_get_line(char *stash);
 
 
 #endif
