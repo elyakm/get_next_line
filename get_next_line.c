@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/18 17:08:36 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 19:41:41 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char	*get_next_line(int fd)
 	stash = read_buff(stash, fd);
 	if (!stash)
 		return (NULL);
+    line = get_line(stash);
+    stash = clean_stash(stash);
 	return (stash);
 }
 

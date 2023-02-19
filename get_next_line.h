@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:14 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/18 17:07:30 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 19:42:12 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,8 @@ char    *ft_strjoin(char *stash, char *buff);
 char    *ft_strchr(const char *s, int c);
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*get_next_line(int fd);
+char	*clean_stash(char *stash);
+char    *get_line(char *stash);
+
 
 #endif

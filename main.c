@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:58:22 by klaksi            #+#    #+#             */
-/*   Updated: 2023/02/18 17:07:56 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 19:42:55 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ int	main(void)
 	
 	printf("%s\n", get_next_line(fd));
 	printf("%s\n", get_next_line(fd));
-	// printf("%s\n", get_next_line(fd));
-	// printf("%s\n", get_next_line(fd));
-	// printf("%s\n", get_next_line(fd));
-	// printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
 }
