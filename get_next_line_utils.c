@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/18 16:52:48 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/18 19:20:02 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,47 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
     }
     dst[i] = '\0';
     return (len);
+}
+
+char    *ft_strdup(const char *s1)
+{
+    char *s2;
+    size_t i;
+
+    i = 0;
+    s2 = (char *)malloc(sizeof(char) * (ft_strlen((char *)s1) + 1));
+    if (!s2)
+        return (NULL);
+    while (s1[i])
+    {
+        s2[i] = s1[i];
+        i++;
+    }
+    s2[i] = '\0';
+    return (s2);
+}
+
+char    *get_line(char *stash)
+{
+    char *line;
+    size_t i;
+    
+    if (!*stash)
+		return (NULL);
+	i = 0;
+	while (stash[i] && stash[i] != '\n')
+		i++;
+	line = (char *)ft_calloc(i + 1, sizeof(char));
+	if (!line)
+		return (NULL);
+	i = 0;
+	while (stash[i] && stash[i] != '\n')
+	{
+		line[i] = stash[i];
+		i++;
+	}
+	if (stash[i] == '\n')
+		line[i++] = '\n';
+	line[i] = '\0';
+	return (line);
 }
