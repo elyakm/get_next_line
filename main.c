@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:58:22 by klaksi            #+#    #+#             */
-/*   Updated: 2023/02/18 19:51:42 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/20 12:31:46 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,16 +56,16 @@
 // }
 
 
-int	main(void)
-{
-	int fd;
+// int	main(void)
+// {
+// 	int fd;
 	
-	fd = open("txt.txt", O_RDONLY);
+// 	fd = open("txt.txt", O_RDONLY);
 	
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-}
+// 	printf("%s", get_next_line(fd));
+// 	printf("%s", get_next_line(fd));
+// 	printf("%s", get_next_line(fd));
+// 	printf("%s", get_next_line(fd));
+// 	printf("%s", get_next_line(fd));
+// 	printf("%s", get_next_line(fd));
+// }
