@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:45:17 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/20 12:45:14 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/20 13:48:09 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strjoin(char *stash, char *buff)
 	while (buff[j])
 		line[i++] = buff[j++];
 	line[i] = '\0';
-	free (stash);
+	free(stash);
 	return (line);
 }
 
@@ -72,7 +72,7 @@ char	*ft_get_line(char *stash)
 	i = 0;
 	while (stash[i] && stash[i] != '\n')
 		i++;
-	line = (char *)ft_calloc(i + 1, sizeof(char));
+	line = (char *)ft_calloc(i + 2, sizeof(char));
 	if (!line)
 		return (NULL);
 	i = 0;

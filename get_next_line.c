@@ -6,7 +6,7 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:43:50 by kamelialaks       #+#    #+#             */
-/*   Updated: 2023/02/20 12:33:44 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/20 13:46:08 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t element_count, size_t size)
 		return (NULL);
 	while (i < (element_count * size))
 	{
-		tab[i] = '\0';
+		tab[i] = 0;
 		i++;
 	}
 	return ((void *)tab);
@@ -34,7 +34,7 @@ static char	*read_buff(char *stash, int fd)
 	char	*buff;
 	int		return_value;
 
-	buff = (char *)ft_calloc(sizeof(char), (BUFFER_SIZE + 1));
+	buff = (char *)ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!buff)
 		return (NULL);
 	return_value = 1;
@@ -50,7 +50,7 @@ static char	*read_buff(char *stash, int fd)
 		buff[return_value] = '\0';
 		stash = ft_strjoin(stash, buff);
 	}
-	free (buff);
+	free(buff);
 	return (stash);
 }
 

@@ -6,12 +6,13 @@
 /*   By: klaksi <klaksi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:58:22 by klaksi            #+#    #+#             */
-/*   Updated: 2023/02/20 12:31:46 by klaksi           ###   ########.fr       */
+/*   Updated: 2023/02/20 13:33:14 by klaksi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
+# include <fcntl.h>
+# include <stdio.h>
 // int main()
 // {
 // 	int fd = open("txt.txt", O_RDONLY);
